@@ -32,12 +32,12 @@ from
 //   customer: "https://customer.example.com/login.html"
 //   staff:    "https://staff.example.com/login.html"
 const PORTAL_URLS = {
-  customer: "../customer/login.html",
-  staff: "../staff/login.html",
+  customer: "../login.html",
+  staff: "../login.html",
 };
 
 // portal ที่เปิดอยู่ (ดูจากโฟลเดอร์ใน path)
-const PORTAL = location.pathname.includes("/customer/") ? "customer" : "staff";
+const PORTAL = location.pathname.includes("/") ? "customer" : "staff";
 
 // แท็ก <a data-portal="customer|staff"> ให้ชี้ไป URL ของ portal นั้นโดยอัตโนมัติ
 // (ช่วยให้ลิงก์ข้าม portal ใช้ได้ทั้งตอนรันในเครื่องและตอนแยก domain)
